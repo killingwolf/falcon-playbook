@@ -35,7 +35,7 @@
   with_items:
     - agent
     - transfer
-    - gateway
+    # - gateway
     - graph
     - query
     - sender
@@ -58,7 +58,7 @@
   with_items:
     - agent
     - transfer
-    - gateway
+    # - gateway
     - graph
     - query
     - sender
