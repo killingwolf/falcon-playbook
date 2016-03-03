@@ -1,5 +1,8 @@
 ---
 # file: roles/{{ module }}/tasks/main.yml
+- name: ensure {{ module }} dir and user
+  shell: useradd -u {{ deploy_uid }} {{ deploy_user }}; mkdir -p {{ deploy_root }}/{{ module }}
+  ignore_errors: True
 
 - name: make {{ module }} dir
   file: 
