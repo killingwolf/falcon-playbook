@@ -50,7 +50,7 @@
     - clone_code
 
 - name: compile golang modules
-  shell: export GOPATH={{ gopath }} && cd {{ gopath }}/{{ code_root }}/{{ item }} && git checkout master --force && git pull && go get ./... && ./control build && ./control pack && mv falcon-{{ item }}*.tar.gz {{ item }}.tar.gz
+  shell: export GOPATH={{ gopath }} && cd {{ gopath }}/{{ code_root }}/{{ item }} && git checkout master --force && git pull && go get ./... ; ./control build && ./control pack && mv falcon-{{ item }}*.tar.gz {{ item }}.tar.gz
   when: "'{{ item }}' in compile or 'all' in compile"
   with_items:
     - agent
