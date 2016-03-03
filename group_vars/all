@@ -208,7 +208,7 @@ judge:
   http:
     listen: 6081
   rpc:
-    listen: 6080
+    listen: 6082
   Hbs:
     timeout: 300
     interval: 60
